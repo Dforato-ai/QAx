@@ -12,6 +12,17 @@ export class LoginPage {
         await expect(loginForm).toBeVisible()
     }
 
+    async submit(email, password) {
+        await this.page.getByPlaceholder('E-mail').fill(email)
+        await this.page.getByPlaceholder('Senha').fill(password)
+        // await this.page.getByRole('button', { name: 'Entrar' }).click()
+        await this.page.getByText('Entrar').click()
+    }
 
-
+    async isLoggedIn() {
+        //     const logout = this.page.locator('.logout')
+        //     await expect(logout).toBeVisible()
+        await this.page.waitForLoadState('networkidle')
+        await expect(this.page).toHaveURL(/admin/)
+    }
 }
