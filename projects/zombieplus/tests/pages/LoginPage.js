@@ -25,4 +25,20 @@ export class LoginPage {
         await this.page.waitForLoadState('networkidle')
         await expect(this.page).toHaveURL(/admin/)
     }
-}
+
+    async toastHaveText(message) {
+        const toast = this.page.locator('.toast')
+        await expect(toast).toHaveText(message)
+        await expect(toast).not.toBeVisible({ timeout: 5000 })
+    }
+
+    async alertHaveText(text) {
+        const alert = this.page.locator('span[class$=alert]')
+        await expect(alert).toHaveText(text)
+    }
+
+    // async alertPasswordHaveText(text) {    
+    //     const alert = this.page.locator('.password-alert')
+    //     await expect(alert).toHaveText(text)
+    // } 
+}       

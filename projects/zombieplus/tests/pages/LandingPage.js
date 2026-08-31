@@ -23,17 +23,7 @@ export class LandingPage {
             .getByText('Quero entrar na fila').click ()
     }
 
-    async toastHaveText(message) {
-        //  await page.getByText('seus dados conosco').click()
-        //   const vcontent = await page.content()
-        //   console.log(vcontent)
-                   
-        const toast = this.page.locator('.toast')   
-          await expect(toast).toHaveText(message)
-        //   await expect(toast).toBeHidden({timeout: 5000})
-        await expect(toast).not.toBeVisible({timeout: 5000})
-    }
-
+   
     async alertHaveText(target) {
         await expect(this.page.locator('.alert')).toHaveText(target)     
     }
