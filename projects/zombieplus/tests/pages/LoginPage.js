@@ -19,13 +19,7 @@ export class LoginPage {
         await this.page.getByText('Entrar').click()
     }
 
-    async isLoggedIn() {
-        //     const logout = this.page.locator('.logout')
-        //     await expect(logout).toBeVisible()
-        await this.page.waitForLoadState('networkidle')
-        await expect(this.page).toHaveURL(/admin/)
-    }
-
+   
     async toastHaveText(message) {
         const toast = this.page.locator('.toast')
         await expect(toast).toHaveText(message)
