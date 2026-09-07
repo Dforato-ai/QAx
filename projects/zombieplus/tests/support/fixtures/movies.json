@@ -1,0 +1,98 @@
+{
+  "guerra_mundial_z": {
+    "title": "Guerra Mundial Z",
+    "overview": "Um ex-investigador da ONU é chamado para investigar uma misteriosa pandemia que transforma pessoas em criaturas extremamente agressivas e ameaça destruir a humanidade.",
+    "company": "Paramount Pictures",
+    "release_year": 2013,
+    "featured": false,
+    "cover": "/images/movies/guerra_mundial_z.png"
+  },
+  "eu_sou_a_lenda": {
+    "title": "Eu Sou a Lenda",
+    "overview": "Robert Neville é aparentemente o último sobrevivente de uma pandemia que transformou grande parte da humanidade em criaturas violentas. Enquanto procura uma cura, ele tenta sobreviver em uma Nova York abandonada.",
+    "company": "Warner Bros. Pictures",
+    "release_year": 2007,
+    "featured": false,
+    "cover": "/images/movies/eu_sou_a_lenda.png"
+  },
+  "exterminio": {
+    "title": "Extermínio",
+    "overview": "Após acordar de um coma, Jim descobre que Londres foi devastada por um vírus que transforma pessoas em criaturas extremamente agressivas. Ao lado de outros sobreviventes, ele busca um lugar seguro.",
+    "company": "20th Century Fox",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "/images/movies/exterminio.png"
+  },
+  "zumbilandia": {
+    "title": "Zumbilândia",
+    "overview": "Em um mundo destruído por uma epidemia zumbi, quatro sobreviventes formam uma improvável equipe enquanto atravessam os Estados Unidos em busca de um lugar seguro.",
+    "company": "Columbia Pictures",
+    "release_year": 2009,
+    "featured": false,
+    "cover": "/images/movies/zumbilandia.png"
+  },
+  "todo_mundo_quase_morto": {
+    "title": "Todo Mundo Quase Morto",
+    "overview": "Shaun é um homem comum que precisa enfrentar uma invasão de zumbis pelas ruas de Londres enquanto tenta proteger sua família e reconquistar sua namorada.",
+    "company": "Universal Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "/images/movies/todo_mundo_quase_morto.png"
+  },
+  "madrugada_dos_mortos": {
+    "title": "Madrugada dos Mortos",
+    "overview": "Um grupo de sobreviventes de uma epidemia zumbi se refugia em um shopping center enquanto tenta sobreviver às hordas de mortos-vivos que cercam o local.",
+    "company": "Universal Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "/images/movies/madrugada_dos_mortos.png"
+  },
+  "invasao_zumbi": {
+    "title": "Invasão Zumbi",
+    "overview": "Durante uma viagem de trem para Busan, um pai e sua filha ficam presos em meio a uma epidemia que transforma passageiros em zumbis violentos.",
+    "company": "Next Entertainment World",
+    "release_year": 2016,
+    "featured": false,
+    "cover": "/images/movies/invasao_zumbi.png"
+  },
+  "exercito_dos_mortos": {
+    "title": "Exército dos Mortos",
+    "overview": "Após Las Vegas ser tomada por zumbis, um grupo de mercenários entra na cidade isolada para realizar um grande assalto antes que uma operação militar destrua a área.",
+    "company": "Netflix",
+    "release_year": 2021,
+    "featured": false,
+    "cover": "/images/movies/exercito_dos_mortos.png"
+  },
+  "noite_dos_mortos_vivos": {
+    "title": "A Noite dos Mortos-Vivos",
+    "overview": "Um grupo de pessoas se refugia em uma casa isolada enquanto mortos-vivos começam a atacar, transformando a noite em uma luta desesperada pela sobrevivência.",
+    "company": "Continental Distributing",
+    "release_year": 1968,
+    "featured": false,
+    "cover": "/images/movies/noite_dos_mortos_vivos.png"
+  },
+  "dia_dos_mortos": {
+    "title": "O Dia dos Mortos",
+    "overview": "Em um mundo dominado por zumbis, um pequeno grupo de militares e cientistas tenta encontrar uma maneira de compreender os mortos-vivos e preservar o que resta da humanidade.",
+    "company": "United Film Distribution Company",
+    "release_year": 1985,
+    "featured": false,
+    "cover": "/images/movies/dia_dos_mortos.png"
+  },
+  "terra_dos_mortos": {
+    "title": "Terra dos Mortos",
+    "overview": "Anos após o apocalipse zumbi, os sobreviventes vivem em uma cidade fortificada enquanto os mortos-vivos começam a desenvolver inteligência e organização.",
+    "company": "Universal Pictures",
+    "release_year": 2005,
+    "featured": false,
+    "cover": "/images/movies/terra_dos_mortos.png"
+  },
+  "guerra_dos_mortos": {
+    "title": "Guerra dos Mortos",
+    "overview": "Sobreviventes lutam para escapar de um mundo devastado por uma epidemia que transformou milhões de pessoas em mortos-vivos.",
+    "company": "Independent Distribution",
+    "release_year": 2013,
+    "featured": false,
+    "cover": "/images/movies/guerra_dos_mortos.png"
+  }
+}

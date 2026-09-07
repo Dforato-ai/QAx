@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker')
 const { LandingPage } = require('../pages/LandingPage')
 const { Toast } = require('../pages/Components')
 
-import { log } from 'node:console'
+// import { log } from 'node:console'
   
 let landingPage
 let toast
