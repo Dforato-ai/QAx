@@ -28,6 +28,8 @@ descrito abaixo.
 - **Negativos antes de cobertura de tela** — metade dos cenários verifica o que o sistema
   deve **recusar** (campos obrigatórios, formato inválido, duplicidade).
 - **Sem espera fixa** — as verificações usam a espera automática do `expect`.
+- **Ambiente sobe com a suíte** — o `webServer` do Playwright inicia API e front antes
+  dos testes e encerra no final; não sobra processo segurando porta entre execuções.
 - **Trace sempre ligado** (screenshots e DOM) para diagnosticar falha sem reexecutar;
   no CI, `retries` e `forbidOnly` ficam ativos.
 
@@ -47,12 +49,16 @@ projects/zombieplus/      testes
 
 ## Como rodar
 
-Pré-requisitos: Node.js, Docker.
+Pré-requisitos: Node.js e Docker. A porta 5432 precisa estar livre — um PostgreSQL
+instalado na máquina ocupa essa porta e impede o container do banco de subir.
+
+### Preparação (uma vez)
 
 ```bash
 # 1. Banco (PostgreSQL + pgAdmin em http://localhost:16543)
 cd apps/zombieplus
 docker compose up -d
+docker exec pgdb psql -U postgres -c "create database zombieplus"
 
 # 2. API — precisa de um .env (não versionado) com:
 #    APP_URL, PORT=3333, FRONT_URL=http://localhost:3000, NODE_ENV, APP_NAME,
@@ -60,20 +66,35 @@ docker compose up -d
 cd api
 npm install
 ./db.sh          # recria as tabelas e carrega a massa inicial
-npm run dev
 
-# 3. Front (em outro terminal)
-cd apps/zombieplus/web
+# 3. Front
+cd ../web
 npm install
-npm run dev
 
-# 4. Testes (em outro terminal)
-cd projects/zombieplus
+# 4. Testes
+cd ../../../projects/zombieplus
 npm install
 npx playwright install chromium
+```
+
+### Rotina de execução
+
+```bash
+# 1. Banco
+cd apps/zombieplus
+docker compose up -d
+
+# 2. Testes — o Playwright sobe a API e o front, roda a suíte e encerra os dois
+cd ../../projects/zombieplus
 npx playwright test
 npx playwright show-report
 ```
+
+A API (porta 3333) e o front (porta 3000) são iniciados pelo bloco `webServer` do
+`playwright.config.js`; não é preciso manter um terminal aberto para cada um. Se algum
+deles já estiver no ar, o Playwright reaproveita em vez de subir outro.
+
+Para voltar o banco ao estado inicial: `./db.sh` em `apps/zombieplus/api`.
 
 ## Próximos passos
 
