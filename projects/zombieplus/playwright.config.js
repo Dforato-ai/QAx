@@ -77,11 +77,24 @@ export default defineConfig({
     // },
   ],
 
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  /* Sobe a API e o front antes dos testes e encerra os dois no final.
+   * Se a porta já estiver respondendo (ex.: você subiu na mão), reaproveita;
+   * no CI sempre sobe do zero. O banco (PostgreSQL) precisa estar no ar antes. */
+  webServer: [
+    {
+      name: 'api',
+      command: 'npm run dev',
+      cwd: '../../apps/zombieplus/api',
+      url: 'http://localhost:3333',
+      reuseExistingServer: !process.env.CI,
+    },
+    {
+      name: 'web',
+      command: 'npm run dev',
+      cwd: '../../apps/zombieplus/web',
+      url: 'http://localhost:3000',
+      reuseExistingServer: !process.env.CI,
+    },
+  ],
 });
 
